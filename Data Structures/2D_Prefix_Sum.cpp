@@ -10,7 +10,9 @@
 #define DBG(x) cerr << #x << " = " << (x) << endl
 #define RAYA cerr << "===============================" << endl
 #define FIO ios_base::sync_with_stdio(false); cin.tie(NULL); 
+
 using namespace std;
+
 typedef long long ll;
 typedef pair<ll,ll> ii;
 typedef vector<ll> vi;
