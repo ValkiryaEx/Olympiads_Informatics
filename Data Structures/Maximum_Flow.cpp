@@ -39,18 +39,18 @@ ll max_flow(int source, int sink){
 		}
 		return (parent[sink]!=-1);
 	};
-  //mientras exista un camino desde la fuente al sumidero
+ 	//mientras exista un camino desde la fuente al sumidero
 	while(bfs()){
 		ll min_flow=1e18;
 		int node=sink;
-    //tomo el menor flujo del camino
+    		//tomo el menor flujo del camino
 		while(node!=source){
 			min_flow=min(min_flow, capacidad[parent[node]][node]);
 			node=parent[node];
 		}
 		max_flow+=min_flow;
 		node=sink;
-    //se lo resto al camino
+   		//se lo resto al camino
 		while(node!=source){
 			capacidad[node][parent[node]]+=min_flow;
 			capacidad[parent[node]][node]-=min_flow;
